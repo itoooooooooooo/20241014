@@ -22,7 +22,7 @@ def save_log_mel_spectrograms(data_path, save_dir, n_fft=1024, hop_length=512, n
                                                          hop_length=hop_length, 
                                                          n_mels=n_mels, 
                                                          power=power)
-        # 対数メルスペクトログラムの計算（クリッピングして範囲を制御）
+        # 対数メルスペクトログラムの計算
         log_mel_spectrogram = 20.0 * np.log10(np.maximum(mel_spectrogram, 1e-5))
 
         # 正方形にパディングしてからリサイズ保存
